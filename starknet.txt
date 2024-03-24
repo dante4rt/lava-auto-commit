@@ -5,3 +5,4 @@
 {"jsonrpc":"2.0","id":"\"1\"","result":626658}
 {"jsonrpc":"2.0","id":"\"1\"","result":626660}
 {"jsonrpc":"2.0","id":"1","result":626664}
+{"jsonrpc":"2.0","id":"1","result":626664}
