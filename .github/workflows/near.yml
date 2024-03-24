@@ -1,0 +1,49 @@
+name: NEAR Auto Commit
+
+on:
+  push:
+    branches:
+      - master
+
+  schedule:
+    - cron: '*/10 * * * *' # Runs every 10 minutes
+
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
+
+permissions:
+  contents: write # Grants permissions to write to the repo
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run NEAR script
+        run: |
+          chmod +x near.sh
+          ./near.sh
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "rxmxdhxni@gmail.com"
+          git config --local user.name "dante4rt"
+          git add -A
+
+          # Array of commit messages with icons
+          arr=("✨ Update" "🔄 Refresh" "🚀 Upgrade" "📈 Sync" "🔧 Fix" "🔍 Investigate")
+
+          # Select a random index
+          index=$(( RANDOM % ${#arr[@]} ))
+
+          # Select a random commit message
+          random_message="${arr[$index]}"
+
+          git commit -m "$random_message"
+
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          directory: '.'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
