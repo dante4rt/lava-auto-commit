@@ -6,8 +6,7 @@ on:
       - master
 
   schedule:
-    - name: Random cron schedule
-      cron: "*/{{ range(15, 21) | random }} * * * *"
+    cron: '*/{{ range(15, 21) | random }} * * * *'
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
