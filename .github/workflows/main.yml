@@ -6,12 +6,16 @@ on:
       - master
 
   schedule:
-    - cron: '*/10 * * * *' # Runs every 10 minutes
+    - cron: '{{ 0 + random(15, 20) }} * * * *' # Runs every 15-20 minutes
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
 permissions:
   contents: write # Grants permissions to write to the repo
+
+env:
+  GIT_USER_EMAIL: rxmxdhxni@gmail.com
+  GIT_USER_NAME: dante4rt
 
 jobs:
   ethereum_auto_commit:
@@ -27,8 +31,8 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config user.email "rxmxdhxni@gmail.com"
-          git config user.name "dante4rt"
+          git config user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
 
       - name: Commit changes
         run: |
@@ -46,10 +50,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Pull latest changes
-        run: |
-          git pull origin master
-
       - name: Run NEAR script
         run: |
           chmod +x near.sh
@@ -57,8 +57,8 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config user.email "rxmxdhxni@gmail.com"
-          git config user.name "dante4rt"
+          git config user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
 
       - name: Commit changes
         run: |
@@ -76,10 +76,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Pull latest changes
-        run: |
-          git pull origin master
-
       - name: Run StarkNet script
         run: |
           chmod +x starknet.sh
@@ -87,8 +83,8 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config user.email "rxmxdhxni@gmail.com"
-          git config user.name "dante4rt"
+          git config user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
 
       - name: Commit changes
         run: |
@@ -106,10 +102,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Pull latest changes
-        run: |
-          git pull origin master
-
       - name: Run Axelar script
         run: |
           chmod +x axelar.sh
@@ -117,8 +109,8 @@ jobs:
 
       - name: Configure Git identity
         run: |
-          git config user.email "rxmxdhxni@gmail.com"
-          git config user.name "dante4rt"
+          git config user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
 
       - name: Commit changes
         run: |
