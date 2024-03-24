@@ -7,7 +7,7 @@ on:
 
   schedule:
     - name: Random cron schedule
-      cron: "${{ github.event_name == 'schedule' && github.event.schedule ? github.event.schedule : '15-20 * * * *' }}"
+      cron: "*/{{ range(15, 21) | random }} * * * *"
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
