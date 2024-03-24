@@ -8,13 +8,13 @@ This repository contains a GitHub Actions workflow for automatically fetching da
 
 Before running the workflow, make sure to configure the following parameters:
 
-1. **User Email and Name**: Update the `user.email` and `user.name` in `main.yml` to reflect your GitHub account details.
+1. **User Email and Name**: Update the `GIT_USER_EMAIL` and `GIT_USER_NAME` environment variables in the workflow file (`main.yml`) to reflect your GitHub account details.
 
 2. **RPC URLs**: Update the RPC URLs in each script file (`ethereum.sh`, `near.sh`, `starknet.sh`, and `axelar.sh`) with the corresponding URLs of your blockchain networks.
 
 ### Execution
 
-The workflow is triggered automatically on a schedule (every 10 minutes) and can also be manually triggered from the GitHub UI.
+The workflow is triggered automatically on a schedule (every 15-20 minutes) and can also be manually triggered from the GitHub UI.
 
 1. **Automatic Trigger**: The workflow is automatically triggered based on the schedule defined in the workflow file (`main.yml`). It fetches data from each blockchain network and commits the changes to the repository.
 
