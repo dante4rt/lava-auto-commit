@@ -25,10 +25,13 @@ jobs:
           chmod +x ethereum.sh
           ./ethereum.sh
 
+      - name: Configure Git identity
+        run: |
+          git config user.email "rxmxdhxni@gmail.com"
+          git config user.name "dante4rt"
+
       - name: Commit changes
         run: |
-          git config --global user.email "rxmxdhxni@gmail.com"
-          git config --global user.name "dante4rt"
           git add -A
           git commit -m "Auto commit changes for Ethereum network"
 
@@ -51,6 +54,11 @@ jobs:
         run: |
           chmod +x near.sh
           ./near.sh
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "rxmxdhxni@gmail.com"
+          git config user.name "dante4rt"
 
       - name: Commit changes
         run: |
