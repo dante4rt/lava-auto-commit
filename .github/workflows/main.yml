@@ -6,7 +6,7 @@ on:
       - master
 
   schedule:
-    - cron: '*/20 * * * *' # Every 20 minutes, you can adjust it
+    - cron: '*/10 * * * *' # Runs every 10 minutes
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
@@ -50,6 +50,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Pull latest changes
+        run: |
+          git pull origin master
+
       - name: Run NEAR script
         run: |
           chmod +x near.sh
@@ -76,6 +80,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Pull latest changes
+        run: |
+          git pull origin master
+
       - name: Run StarkNet script
         run: |
           chmod +x starknet.sh
@@ -101,6 +109,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Pull latest changes
+        run: |
+          git pull origin master
 
       - name: Run Axelar script
         run: |
