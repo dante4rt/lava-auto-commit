@@ -23,6 +23,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Pull latest changes
+         run: |
+          git pull origin master
 
       - name: Run Ethereum script
         run: |
