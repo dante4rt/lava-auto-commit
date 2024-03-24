@@ -1,4 +1,4 @@
-name: Ethereum, NEAR, and STARKNET Auto Commit
+name: Ethereum, NEAR, StarkNet, and Axelar Auto Commit
 
 on:
   push:
@@ -30,17 +30,10 @@ jobs:
           git config user.email "rxmxdhxni@gmail.com"
           git config user.name "dante4rt"
 
-      - name: Generate random commit message
-        id: random_commit_message
-        run: |
-          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
-          index=$(( RANDOM % ${#arr[@]} ))
-          echo "::set-output name=message::${arr[$index]}"
-
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
+          git commit -m "Auto commit changes for Ethereum network"
 
       - name: Push changes
         run: |
@@ -67,17 +60,10 @@ jobs:
           git config user.email "rxmxdhxni@gmail.com"
           git config user.name "dante4rt"
 
-      - name: Generate random commit message
-        id: random_commit_message
-        run: |
-          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
-          index=$(( RANDOM % ${#arr[@]} ))
-          echo "::set-output name=message::${arr[$index]}"
-
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
+          git commit -m "Auto commit changes for NEAR network"
 
       - name: Push changes
         run: |
@@ -94,7 +80,7 @@ jobs:
         run: |
           git pull origin master
 
-      - name: Run STARKNET script
+      - name: Run StarkNet script
         run: |
           chmod +x starknet.sh
           ./starknet.sh
@@ -104,17 +90,40 @@ jobs:
           git config user.email "rxmxdhxni@gmail.com"
           git config user.name "dante4rt"
 
-      - name: Generate random commit message
-        id: random_commit_message
+      - name: Commit changes
         run: |
-          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
-          index=$(( RANDOM % ${#arr[@]} ))
-          echo "::set-output name=message::${arr[$index]}"
+          git add -A
+          git commit -m "Auto commit changes for StarkNet network"
+
+      - name: Push changes
+        run: |
+          git push origin master
+
+  axelar_auto_commit:
+    runs-on: ubuntu-latest
+    needs: starknet_auto_commit
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pull latest changes
+        run: |
+          git pull origin master
+
+      - name: Run Axelar script
+        run: |
+          chmod +x axelar.sh
+          ./axelar.sh
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "rxmxdhxni@gmail.com"
+          git config user.name "dante4rt"
 
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
+          git commit -m "Auto commit changes for Axelar network"
 
       - name: Push changes
         run: |
