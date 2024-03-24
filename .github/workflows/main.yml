@@ -1,4 +1,4 @@
-name: Ethereum and NEAR Auto Commit
+name: Ethereum, NEAR, and STARKNET Auto Commit
 
 on:
   push:
@@ -30,10 +30,17 @@ jobs:
           git config user.email "rxmxdhxni@gmail.com"
           git config user.name "dante4rt"
 
+      - name: Generate random commit message
+        id: random_commit_message
+        run: |
+          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
+          index=$(( RANDOM % ${#arr[@]} ))
+          echo "::set-output name=message::${arr[$index]}"
+
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for Ethereum network"
+          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
 
       - name: Push changes
         run: |
@@ -60,10 +67,54 @@ jobs:
           git config user.email "rxmxdhxni@gmail.com"
           git config user.name "dante4rt"
 
+      - name: Generate random commit message
+        id: random_commit_message
+        run: |
+          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
+          index=$(( RANDOM % ${#arr[@]} ))
+          echo "::set-output name=message::${arr[$index]}"
+
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for NEAR network"
+          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
+
+      - name: Push changes
+        run: |
+          git push origin master
+
+  starknet_auto_commit:
+    runs-on: ubuntu-latest
+    needs: near_auto_commit
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pull latest changes
+        run: |
+          git pull origin master
+
+      - name: Run STARKNET script
+        run: |
+          chmod +x starknet.sh
+          ./starknet.sh
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "rxmxdhxni@gmail.com"
+          git config user.name "dante4rt"
+
+      - name: Generate random commit message
+        id: random_commit_message
+        run: |
+          arr=("🚀 Updated contract" "🔧 Fixed bug" "📈 Added new feature" "🌟 Implemented improvement")
+          index=$(( RANDOM % ${#arr[@]} ))
+          echo "::set-output name=message::${arr[$index]}"
+
+      - name: Commit changes
+        run: |
+          git add -A
+          git commit -m "$(echo "${{ steps.random_commit_message.outputs.message }}")"
 
       - name: Push changes
         run: |
