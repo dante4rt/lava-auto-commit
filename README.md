@@ -4,30 +4,34 @@ This repository contains a GitHub Actions workflow for automatically fetching da
 
 ## Usage
 
-### Configuration
+### Get Started
 
-Before running the workflow, make sure to configure the following parameters:
+To use this workflow, follow these steps:
 
-1. **User Email and Name**: Update the `GIT_USER_EMAIL` and `GIT_USER_NAME` environment variables in the workflow file (`main.yml`) to reflect your GitHub account details.
+1. **Use this template**: Click on the "Use this template" button on the GitHub repository page to create a new repository based on this template.
 
-2. **RPC URLs**: Update the RPC URLs in each script file (`ethereum.sh`, `near.sh`, `starknet.sh`, and `axelar.sh`) with the corresponding URLs of your blockchain networks.
+2. **Name your repository**: Give your new repository a name of your choice.
 
-### Execution
+3. **Configure workflow**: After creating the repository, navigate to the Actions tab and click on "Set up a workflow yourself". Copy and paste the content of the `main.yml` file from this repository into the editor.
 
-The workflow is triggered automatically on a schedule (every 15-20 minutes) and can also be manually triggered from the GitHub UI.
+4. **Set user email and name**: Update the `GIT_USER_EMAIL` and `GIT_USER_NAME` environment variables in the workflow file (`main.yml`) to reflect your GitHub account details.
 
-1. **Automatic Trigger**: The workflow is automatically triggered based on the schedule defined in the workflow file (`main.yml`). It fetches data from each blockchain network and commits the changes to the repository.
+5. **Update RPC URLs**: Update the RPC URLs in each script file (`ethereum.sh`, `near.sh`, `starknet.sh`, and `axelar.sh`) with the corresponding URLs of your blockchain networks.
 
-2. **Manual Trigger**: You can manually trigger the workflow from the GitHub UI by selecting the "Run workflow" option.
+6. **Run the workflow**: The workflow is triggered automatically on a schedule (every 15-20 minutes) and can also be manually triggered from the GitHub UI.
 
-### Files
+### Manual Trigger
+
+You can manually trigger the workflow from the GitHub UI by selecting the "Run workflow" option.
+
+## Files
 
 - **ethereum.sh**: Script to fetch data from the Ethereum network.
 - **near.sh**: Script to fetch data from the NEAR network.
 - **starknet.sh**: Script to fetch data from the StarkNet network.
 - **axelar.sh**: Script to fetch data from the Axelar network.
 
-### Workflow
+## Workflow
 
 The workflow consists of multiple jobs, each corresponding to a different blockchain network. The jobs are executed sequentially, with each job depending on the completion of the previous job.
 
