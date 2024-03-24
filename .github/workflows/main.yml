@@ -33,7 +33,7 @@ jobs:
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for Ethereum network"
+          git commit -m "$(shuf -n1 -e "🔥 Hotfix" "✨ Feature" "🚀 Upgrade" "🛠️ Fix" "🔧 Refactor" "🔍 Investigate" "💡 Improve" "📦 Update" "📈 Optimize" "💬 Comment" | awk '{print $0}') Ethereum network"
 
       - name: Push changes
         run: |
@@ -63,7 +63,7 @@ jobs:
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for NEAR network"
+          git commit -m "$(shuf -n1 -e "🔥 Hotfix" "✨ Feature" "🚀 Upgrade" "🛠️ Fix" "🔧 Refactor" "🔍 Investigate" "💡 Improve" "📦 Update" "📈 Optimize" "💬 Comment" | awk '{print $0}') NEAR network"
 
       - name: Push changes
         run: |
@@ -93,7 +93,7 @@ jobs:
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for StarkNet network"
+          git commit -m "$(shuf -n1 -e "🔥 Hotfix" "✨ Feature" "🚀 Upgrade" "🛠️ Fix" "🔧 Refactor" "🔍 Investigate" "💡 Improve" "📦 Update" "📈 Optimize" "💬 Comment" | awk '{print $0}') StarkNet network"
 
       - name: Push changes
         run: |
@@ -123,7 +123,7 @@ jobs:
       - name: Commit changes
         run: |
           git add -A
-          git commit -m "Auto commit changes for Axelar network"
+          git commit -m "$(shuf -n1 -e "🔥 Hotfix" "✨ Feature" "🚀 Upgrade" "🛠️ Fix" "🔧 Refactor" "🔍 Investigate" "💡 Improve" "📦 Update" "📈 Optimize" "💬 Comment" | awk '{print $0}') Axelar network"
 
       - name: Push changes
         run: |
