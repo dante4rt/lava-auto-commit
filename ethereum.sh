@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Perform POST request to fetch Ethereum data
-eth_data=$(curl -H "Content-type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","id":1}' https://eth1.lava.build/lava-referer-8b51600b-b3cc-4893-89ec-5de41f0724db/)
+RPC_URL="https://eth1.lava.build/lava-referer-8b51600b-b3cc-4893-89ec-5de41f0724db/"
 
-# Append the output to a file named ethereum.txt
-echo "$eth_data" >> ethereum.txt
+eth_data=$(curl -s -H "Content-type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","id":1}' "$RPC_URL")
 
-# Display a message
-echo "Ethereum data fetched and saved to ethereum.txt."
+if [ $? -eq 0 ]; then
+    echo "$eth_data" >> ethereum.txt
+    echo "Ethereum data fetched and saved to ethereum.txt."
+else
+    echo "Failed to fetch Ethereum data."
+fi
