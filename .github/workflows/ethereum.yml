@@ -21,7 +21,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Ethereum script
-        run: ./ethereum.sh
+        run: |
+          chmod +x ethereum.sh
+          ./ethereum.sh
 
       - name: Commit changes
         run: |
