@@ -27,8 +27,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.email "rxmxdhxni@gmail.com"
-          git config --local user.name "dante4rt"
+          git config --global user.email "rxmxdhxni@gmail.com"
+          git config --global user.name "dante4rt"
           git add -A
           git commit -m "Auto commit changes for Ethereum network"
 
