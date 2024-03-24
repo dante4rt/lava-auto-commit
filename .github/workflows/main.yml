@@ -6,7 +6,8 @@ on:
       - master
 
   schedule:
-    - cron: '{{ minutes }} * * * *'
+    - name: Random cron schedule
+      cron: "${{ github.event_name == 'schedule' && github.event.schedule ? github.event.schedule : '15-20 * * * *' }}"
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
@@ -20,8 +21,6 @@ env:
 jobs:
   ethereum_auto_commit:
     runs-on: ubuntu-latest
-    env:
-      minutes: ${{ rand(15, 20) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -47,8 +46,6 @@ jobs:
 
   near_auto_commit:
     runs-on: ubuntu-latest
-    env:
-      minutes: ${{ rand(15, 20) }}
     needs: ethereum_auto_commit
     steps:
       - name: Checkout code
@@ -75,8 +72,6 @@ jobs:
 
   starknet_auto_commit:
     runs-on: ubuntu-latest
-    env:
-      minutes: ${{ rand(15, 20) }}
     needs: near_auto_commit
     steps:
       - name: Checkout code
@@ -103,8 +98,6 @@ jobs:
 
   axelar_auto_commit:
     runs-on: ubuntu-latest
-    env:
-      minutes: ${{ rand(15, 20) }}
     needs: starknet_auto_commit
     steps:
       - name: Checkout code
