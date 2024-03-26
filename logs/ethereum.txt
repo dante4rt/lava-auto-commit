@@ -153,3 +153,4 @@
 {"jsonrpc":"2.0","id":1,"result":"0x644bb4030"}
 {"jsonrpc":"2.0","id":1,"result":"0x48bc5218d"}
 {"error":"{\"Error_GUID\":\"5514711135328288069\",\"Error\":\"Failed all retries {GUID:5514711135328288069,error:rpc error: code = Unavailable desc = error reading from server: read tcp 10.35.16.2:52268-\\u003e195.14.6.179:443: use of closed network connection,chain_id:ETH1}\"}"}
+{"jsonrpc":"2.0","id":1,"result":"0x5b2036fe1"}
