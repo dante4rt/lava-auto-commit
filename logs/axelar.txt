@@ -577,3 +577,96 @@
 {"jsonrpc":"2.0","id":"\"1\"","result":{"node_info":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"b7ae99d7d601492179a2f97dc4dad865ec68ae65","listen_addr":"139.45.205.50:26656","network":"axelar-dojo-1","version":"0.34.31","channels":"40202122233038606100","moniker":"node","other":{"tx_index":"on","rpc_address":"tcp://0.0.0.0:26657"}},"sync_info":{"latest_block_hash":"26A83DF64DAC657F227301C06EACA98A00D1EB41BACA100DAC4ED6882C2FB321","latest_app_hash":"B825E18F56DD1031E2BB793EF3E0D53C97ADB93C563FF2D3EE4B4098820C7770","latest_block_height":"12061500","latest_block_time":"2024-04-01T19:07:11.275359766Z","earliest_block_hash":"B7FEC2B0A4E94DA61D73C3668DBCCC37C98CE6867348DE8BC3AFC95597554045","earliest_app_hash":"EEA45370CDB8D7906728E833456F76C720020A326180739DD959E1688157FAA4","earliest_block_height":"7884557","earliest_block_time":"2023-06-18T08:25:08.795669587Z","catching_up":false},"validator_info":{"address":"3E09A5BE6213FA6260B4A9A3961A07469A82A39E","pub_key":{"type":"tendermint/PubKeyEd25519","value":"WW2+AxPPjd+vOny+EdiGkM1fr4g28zqUOVRCk0gaC2s="},"voting_power":"0"}}}
 {"jsonrpc":"2.0","id":"\"1\"","result":{"node_info":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"9b1ca3f29eadab009b710be11e5afc9cc3bea552","listen_addr":"tcp://0.0.0.0:26656","network":"axelar-dojo-1","version":"0.34.31","channels":"40202122233038606100","moniker":"ubuntu","other":{"tx_index":"on","rpc_address":"tcp://127.0.0.1:26657"}},"sync_info":{"latest_block_hash":"A38E202D57B4857CFD7C7D5C692D197A49E2B38199A9B0CB108F733B32D45DC7","latest_app_hash":"FE08D75C0DF32E68EC6C0CBB1FFA4FBE0EB6DD9699ED33940C323E97771A58AE","latest_block_height":"12061658","latest_block_time":"2024-04-01T19:22:47.349560053Z","earliest_block_hash":"193A68AC7DF65B6F8D57C58B6D463845EA050AADE5539F009FE5555ABE6621F0","earliest_app_hash":"E59834CB89A5C2D5FE75DED0A9D2A32DBC136401DABD3CEF05DEFC1D1D81114E","earliest_block_height":"11027095","earliest_block_time":"2024-01-21T11:38:53.42924714Z","catching_up":false},"validator_info":{"address":"9C90838A9081B36901AEE4A60B8C78DDFA78A2C9","pub_key":{"type":"tendermint/PubKeyEd25519","value":"yatGX3S6vNaKYBNNWm9AbxzEnyilzcaXU70H8a2Dj6s="},"voting_power":"0"}}}
 {"jsonrpc":"2.0","id":"\"1\"","result":{"node_info":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"d76b7d81b11d75806e71d9c559877ec419c08e6d","listen_addr":"tcp://0.0.0.0:17356","network":"axelar-dojo-1","version":"0.34.31","channels":"40202122233038606100","moniker":"BSAX","other":{"tx_index":"on","rpc_address":"tcp://0.0.0.0:17357"}},"sync_info":{"latest_block_hash":"6D25BA011594F075E91AFF7AC50E686F745795AEAF2B293A33A157FC10CAB0D5","latest_app_hash":"3B5050E13C797931A9F4228204A692BF123A46D9DD5E332BDD6E98A2DB566A26","latest_block_height":"12061862","latest_block_time":"2024-04-01T19:43:01.740618094Z","earliest_block_hash":"ABF5A3492EA1BD84E3D632250C2914F403A4AC45C1849F9F7834594A248CBCB3","earliest_app_hash":"6D83A09ED354A6C60BCEDD9CB410068978B5E0B80B48041A9708775B3DDB5F49","earliest_block_height":"11827095","earliest_block_time":"2024-03-16T17:53:14.841169734Z","catching_up":false},"validator_info":{"address":"562671CCA0634ACB1196EC832B8867C27D0C9D5A","pub_key":{"type":"tendermint/PubKeyEd25519","value":"dCgTiIg714PpIZGG/WwNh7cpXNcMMCY4aaOYqMDvyfA="},"voting_power":"0"}}}
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> lava.build</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">86db37eeb9ed13eb</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">172.183.130.205</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>
